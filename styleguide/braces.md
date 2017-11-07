@@ -5,7 +5,7 @@ Braces are somewhat controversial. It's a cosmetic argument, and not really much
 
 ### What we will use
 ```java 
-int speed = joystick.getRawAxis(0);  // get y axis from left stick on the controller
+double speed = joystick.getRawAxis(0);  // get y axis from left stick on the controller
 if (speed < 0) {
   motor.set(speed);
 }
@@ -19,7 +19,7 @@ The important thing to notice is that braces (aka curly braces) that start the s
 
 ### Alternative 1
 ```java 
-int speed = joystick.getRawAxis(0);  // get y axis from left stick on the controller
+double speed = joystick.getRawAxis(0);  // get y axis from left stick on the controller
 if (speed < 0) 
 {
   motor.set(speed);
@@ -29,11 +29,11 @@ else
   motor.set(0);
 }
 ```
-This is probably the most common alternative. Essentially, `{` and `}` are both given their own line. It uses extra space.
+This is probably the most common alternative. Essentially, `{` and `}` are both given their own line. It uses extra space, but it is extra clear where scopes start and end.
 
 ### Alternative 2
 ```java 
-int speed = joystick.getRawAxis(0);  // get y axis from left stick on the controller
+double speed = joystick.getRawAxis(0);  // get y axis from left stick on the controller
 if (speed < 0) {
   motor.set(speed);
 } else {
