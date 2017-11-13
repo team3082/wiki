@@ -42,3 +42,14 @@ if (speed < 0) {
 ```
 
 In this case, the `}` doesn't have its own line when followed by an else statement. However, the word `else` is not aligned with the word `if`, which can be a bit annoying.
+
+### Alternative 3
+This one only really applies when there is only one line inside the `if` statement.
+
+```java
+double speed = joystick.getRawAxis(0);  // get y axis from left stick on the controller
+if (speed < 0) {motor.set(speed);} // Save with one-line statements
+else {motor.set(0);}
+``` 
+
+This just makes it hard to read. The beginnings and ends (especially the latter) of `if` statements are not as easy to see.
